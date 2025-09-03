@@ -1,57 +1,52 @@
 import React, { useState } from 'react'
 
-const headerNav=[
+const headerNav =[
   {
-    title: "intro",
-    url: "#intro",
+    title: 'intro',
+    url: '#intro',
   },
   {
-    title: "skill",
-    url: "#skill",
+    title: 'skill',
+    url: '#skill',
   },
   {
-    title: "site",
-    url: "#site",
+    title: 'site',
+    url: '#site',
   },
   {
-    title: "portfolio",
-    url: "#port",
+    title: 'port',
+    url: '#port',
   },
   {
-    title: "contact",
-    url: "#contact",
-  },
-  {
-    title: "more",
-    url: "#more",
+    title: 'contact',
+    url: '#contact',
   },
 ]
 
 
-
 const Header = () => {
 
-  const[show,setShow] = useState(false);
-  // useState(): 훅 명령어의 하나로 컴포넌트의 상태를 관리한는 명령어로 상태가 변경이 도디면 스스로 업데이트를 해주는 명령어
-  //show: 상태 변수, setShow: 상태를 변경하는 함수
-  const toggleMnu =() => {
+  const [show,setShow] = useState(false);
+  const toggleMenu =()=>{
     setShow((pshow) => !pshow);
+
   }
-
-
 
   return (
     <header id='header' role='banner'>
-      <div className='header_inner'>
+      <div className="header_inner">
         <div className="header_logo">
-          <a href="/">portfolio <em>react</em></a>
+          <a href="/">
+            PORTFOLIO <em>react</em>
+          </a>
         </div>
-        <nav className={`header_nav ${show ? "show":""}`} role='navigation' aria-label='메인메뉴'>
+        <nav className={`header_nav ${show ? "show": ""}`} role='navigation' aria-label='메인800이상'>
           <ul>
             {headerNav.map((nav,key)=>(
-              <li key={key}><a href={nav.url}>{nav.title}</a></li>
+            <li key={key}><a href={nav.url}>{nav.title}</a></li>
             ))}
-            
+
+
             {/* <li><a href="#intro">intro</a></li>
             <li><a href="#skill">skill</a></li>
             <li><a href="#site">site</a></li>
@@ -60,7 +55,14 @@ const Header = () => {
 
           </ul>
         </nav>
-        <nav className='header_mnav' id='headerToggle' role='button' aria-controls='햄버거메뉴' tabIndex={0} aria-expanded={show ? "true" : "false"} onClick={toggleMnu}>
+        <nav
+        className='header_mobnav'
+        id='header_Toggle'
+        aria-expanded={show ? "true" : "false"}
+        role='button'
+        tabIndex="0"
+        onClick={toggleMenu}
+        >
           <span></span>
         </nav>
       </div>
