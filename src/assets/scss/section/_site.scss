@@ -3,37 +3,37 @@
     padding: 16px;
 
     .site_title{
+
+        @media(max-width:800px){
+            font-size: 30px;
+            height: auto;
+        }
         position: sticky;
         top: 90px;
         left: 0;
         width: 70%;
         height: 5vw;
-        background-color: var(--mainbg-color);
-        text-transform: uppercase;
         font-size: 3vw;
         font-family: var(--mainNum-font);
-
-
-        @media(max_width:800x){
-            font-size: 30px;
-            height: auto;
-        }
+        text-transform: uppercase;
+        background-color: var(--mainBg-color);
+        
         em{
-            font-size: 20px;
+             font-size: 20px;
         }
-
     }
     .site_wrap{
 
         .site_item{
-            // 박스 고정
+            //박스 고정
             height: 70vh;
             position: sticky;
             left: 0;
-            // 자식들 정렬
+
+             // 자식들 정렬
             @include flex-center;
             flex-direction: column;
-            
+           
 
             &.s1{
                 background-color: var(--subBg100);
@@ -49,7 +49,7 @@
             }
             &.s4{
                 background-color: var(--subBg400);
-                top: 240px; 
+                top: 240px;
             }
             &.s5{
                 background-color: var(--subBg500);
@@ -59,6 +59,7 @@
                 background-color: var(--subBg100);
                 top: 280px;
             }
+
             .num{
                 font-size: 5vw;
                 font-weight: 800;
@@ -68,26 +69,26 @@
                 top: 1vw;
                 left: 1vw;
 
-                @media(max_width:800x){
-                font-size: 30px;
-                left: 20px;
-                top: 20px;
+                @media(max-width:800px){
+                    font-size: 30px;
+                    left: 20px;
+                    top: 20px;
                 }
             }
             .text{
                 margin-bottom: 16px;
 
-                > div{}
-                font-size: 3vw;
-                font-weight: 600;
-                text-align: center;
-                text-transform: uppercase;
-                line-height: 1.1;
-                text-decoration: underline;
+                >div{
+                    font-size: 3vw;
+                    font-weight: 600;
+                    text-align: center;
+                    text-transform: uppercase;
+                    line-height: 1.1;
+                    text-decoration: underline;
 
-
-                @media(max_width:800x){
-                font-size: 25px;
+                    @media(max-width:800px){
+                        font-size: 25px;
+                    }
                 }
             }
             .title{
@@ -98,7 +99,7 @@
 
                 &:hover{
                     color: var(--white);
-                    text-shadow:  1px 1px 0px var(--black);
+                    text-shadow: 1px 1px 1px var(--black);
                 }
             }
             .btn{
@@ -119,20 +120,23 @@
                 left: 0;
                 bottom: 3%;
                 display: flex;
-                justify-content: space-between;
                 width: 100%;
+                justify-content: space-between;
                 padding: 0 1%;
                 border-top: 1px solid var(--black);
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid var(--black);
+
+                // width: 98%;
+                // background-color: var(--mainBg-color);
+                // margin-left: 1%;
 
                 span{
                     font-family: var(--mainKor-font);
                     font-size: 14px;
                     padding: 3px 0;
-                    // display: block;
                 }
             }
-
         }
+        
     }
 }
