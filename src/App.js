@@ -5,11 +5,16 @@ import Sub1 from './views/Sub1';
 import Sub2 from './views/Sub2';
 import Link from './views/Link';
 
+
+
 const App = () => {
 
   useEffect(()=>{
     Link();
+
+    // useEffect(()=>{}); 효과를 줄때 사용하는 훅명령어
   })
+
   return (
     <BrowserRouter>
         <Routes>
